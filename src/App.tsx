@@ -1,9 +1,12 @@
 import { FC } from "react";
+import Nav from "./components/Nav";
 
 const App: FC = (): JSX.Element => {
 	return (
 		<div className="App">
-			<h1>Hello World</h1>
+			<div className="container">
+				<Nav />
+			</div>
 		</div>
 	);
 }

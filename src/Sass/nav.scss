@@ -1,0 +1,79 @@
+.navbar {
+	padding-top: calcs(160, 2);
+	.navbar-brand {
+		img {
+			@include mitad(652.05, 74.35);
+		}
+	}
+	.navbar-toggler{
+		color: white;
+		background: $botton-color;
+		border: 1px solid $botton-color;
+		&:outline{
+			outline: none;
+		}
+	}
+	.menu-list {
+		width: auto;
+	}
+	.navbar-collapse {
+		flex-basis: 0%;
+		flex-grow: 0;
+		align-items: center;
+		@include response-to(992px) {
+			flex-basis: 100%;
+			flex-grow: 1;
+			align-items: center;
+		}
+	}
+	.navbar-nav {
+		text-transform: uppercase;
+		align-items: center;
+		.nav-item {
+			font-size: emSize(calcRem(32, 2));
+			margin-right: calcs(160, 4);
+			display: flex;
+			align-items: center;
+			@include response-to(992px){
+				margin-right: 0px;
+			}
+			&:hover{
+				a{
+					color: white;
+				}
+				&::before, &::after{
+					content: "";
+					display: flex;
+					@include mitad(30, 6);
+					background: $botton-color;
+				}
+			}
+			a {
+				color: $first-color;
+			}
+		}
+		.active {
+			display: flex;
+			align-items: center;
+			a{
+				color: white;
+			}
+			&::before, &::after{
+				content: "";
+				display: flex;
+				@include mitad(30, 6);
+				background: $botton-color;
+			}
+		}
+		.btn-button {
+			border: calcs(4, 2) solid $botton-color;
+			@include mitad(380, 98);
+			border-radius: 64px 0 64px 64px;
+			font-size: emSize(calcRem(28, 2));
+			color: white;
+			&:inline {
+				opacity: 0;
+			}
+		}
+	}
+}
