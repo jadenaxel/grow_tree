@@ -1,0 +1,45 @@
+.grow {
+	.left, .right{
+		@include sameSize(calcRem(240, 4));
+		align-self: center;
+		cursor: pointer;
+		@include response-to(768px){
+			display: none;
+		}
+	}
+	.left {
+		transform: rotate(180deg);
+	}
+	.growContent {
+		.tree {
+			object-fit: contain;
+			@include mitad(816);
+			margin-bottom: 20px;
+			@include response-to(768px){
+				@include mitad(616);
+			}
+		}
+		.description{
+			width: calcs(1460, 3);
+			height: calcs(116, 2);
+			@include response-to(768px){
+				width: 80%;
+			}
+			p{
+				font-family: "Montserrat";
+				text-align: center;
+				color: white;
+				font-size: emSize(calcRem(44, 3));
+				margin-bottom: calcs(80, 3);
+			}
+			button{
+				align-self: center;
+				color: white;
+				background-color: $botton-color;
+				width: calcs(570, 2.5);
+				height: 128px;
+				border-radius: 64px 0 64px 64px;
+			}
+		}
+	}
+}

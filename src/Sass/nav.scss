@@ -1,8 +1,12 @@
 .navbar {
-	padding-top: calcs(160, 2);
+	margin-bottom: calcsV(247, 20);
+	padding-top: calcsV(160, 30);
 	.navbar-brand {
 		img {
 			@include mitad(652.05, 74.35);
+			@include response-to(768px){
+				@include mitad(452.05, 74.35);
+			}
 		}
 	}
 	.navbar-toggler{
